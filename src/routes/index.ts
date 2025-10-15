@@ -13,6 +13,7 @@ import refreshTokenLoader from "@/routes/loaders/refreshToken";
  */
 import { Login } from "@/pages/auth/Login";
 import { Signup } from "@/pages/auth/Signup";
+import { RootLayout } from "@/components/layouts/Root";
 
 /**
  * actions
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
+    Component: RootLayout,
     children: [
       {
         index: true,
