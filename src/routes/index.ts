@@ -14,6 +14,7 @@ import refreshTokenLoader from "@/routes/loaders/refreshToken";
 import { Login } from "@/pages/auth/Login";
 import { Signup } from "@/pages/auth/Signup";
 import { RootLayout } from "@/components/layouts/Root";
+import { Home } from "@/pages/user/Home";
 
 /**
  * actions
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        Component: Home,
       },
       {
         path: "blogs",
