@@ -7,6 +7,7 @@ import { createBrowserRouter } from "react-router";
  * loaders
  */
 import refreshTokenLoader from "@/routes/loaders/refreshToken";
+import homeLoader from "@/routes/loaders/user/home";
 
 /**
  * pages
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+        loader: homeLoader,
       },
       {
         path: "blogs",

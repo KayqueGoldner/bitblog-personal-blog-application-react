@@ -3,11 +3,14 @@
  */
 import { Page } from "@/components/Page";
 import { Hero } from "@/components/home/hero";
+import { RecentBlogs } from "@/components/home/RecentBlogs";
 
 export const Home = () => {
   return (
     <Page>
       <Hero />
+
+      <RecentBlogs />
     </Page>
   );
 };
