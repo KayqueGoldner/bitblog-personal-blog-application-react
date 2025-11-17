@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 /**
  * components
  */
+import { BlogCard } from "@/components/BlogCard";
 
 /**
  * types
@@ -79,7 +80,17 @@ export const RecentBlogs = ({
                 className={cn(index === 0 && "lg:row-span-3")}
                 variants={itemVariant}
               >
-                <BlogCard />
+                <BlogCard
+                  bannerUrl={banner.url}
+                  bannerWidth={banner.width}
+                  bannerHeight={banner.height}
+                  title={title}
+                  content={content}
+                  slug={slug}
+                  authorName={`${author.firstName} ${author.lastName}`}
+                  publishedAt={publishedAt}
+                  size={index > 0 ? "sm" : "default"}
+                />
               </motion.li>
             ),
           )}

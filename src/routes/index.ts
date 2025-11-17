@@ -15,6 +15,7 @@ import homeLoader from "@/routes/loaders/user/home";
 import { Login } from "@/pages/auth/Login";
 import { Signup } from "@/pages/auth/Signup";
 import { RootLayout } from "@/components/layouts/Root";
+import { Home } from "@/pages/user/Home";
 
 /**
  * actions
@@ -48,11 +49,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-<<<<<<< Updated upstream
-=======
         Component: Home,
         loader: homeLoader,
->>>>>>> Stashed changes
       },
       {
         path: "blogs",
