@@ -8,6 +8,7 @@ import { createBrowserRouter } from "react-router";
  */
 import refreshTokenLoader from "@/routes/loaders/refreshToken";
 import homeLoader from "@/routes/loaders/user/home";
+import userBlogLoader from "@/routes/loaders/user/blogs";
 
 /**
  * pages
@@ -16,6 +17,7 @@ import { Login } from "@/pages/auth/Login";
 import { Signup } from "@/pages/auth/Signup";
 import { RootLayout } from "@/components/layouts/Root";
 import { Home } from "@/pages/user/Home";
+import { Blogs } from "@/pages/user/Blogs";
 
 /**
  * actions
@@ -54,6 +56,8 @@ const router = createBrowserRouter([
       },
       {
         path: "blogs",
+        Component: Blogs,
+        loader: userBlogLoader,
       },
       {
         path: "blogs/:slug",
